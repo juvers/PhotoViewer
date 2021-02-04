@@ -1,20 +1,24 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<!-- <div class="basic-container">
+    <h2>Basic Example</h2>
+    <gallery id="basic-test" fluid [items]="items"></gallery>
+</div>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<div class="lightbox-example">
+    <h2>Lightbox Example</h2>
+    <button (click)="lightbox.open(0)">Open Lightbox</button>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+
+    <button (click)="lightbox.open(0, 'lightbox', {panelClass: 'fullscreen'})">Open Lightbox in fullscreen mode</button>
+</div> -->
+
+<div class="gallerize-example">
+    <h2>Gallerize Example</h2>
+    <div class="container" gallerize>
+        <img *ngFor="let img of imageData let i = index" (click)="lightbox.open(i, 'lightbox', {panelClass: 'fullscreen'})" [src]="img.srcUrl">
+    </div>
+</div>
+<!-- <div class="grid">
+    <div class="grid-item" *ngFor="let item of imageData let i = index" [lightbox]="i" [gallery]="galleryId">
+        <img [src]="item.data.thumbnail">
+    </div>
+</div> -->
